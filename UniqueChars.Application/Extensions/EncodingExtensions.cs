@@ -11,7 +11,7 @@ namespace UniqueChars.Application.Extensions
 
         public static int GetMaximumCharacterCount(this ASCIIEncoding encoding)
         {
-            return (int)Math.Pow(2, 7) - 1; // 0 to 127, 7-bit character code
+            return (int)Math.Pow(2, 7); // 128, 7-bit character code
         }
 
         public static string GetUniqueSequence(this ASCIIEncoding encoding, int? numberOfCharacters = null)
