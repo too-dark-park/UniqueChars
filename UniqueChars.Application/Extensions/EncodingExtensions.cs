@@ -11,14 +11,17 @@ namespace UniqueChars.Application.Extensions
 
         public static int GetMaximumCharacterLimit(this ASCIIEncoding encoding)
         {
-            return (int)Math.Pow(2, 7); // 128, 7-bit character code
+            return 128; //(int)Math.Pow(2, 7); // 128, 7-bit character code
         }
 
         public static string GetUniqueSequence(this ASCIIEncoding encoding, int? numberOfCharacters = null)
         {
-            // For the purpose of this example app, ensure numberOfCharacters doesn't exceed GetMaximumCharacterCount
-            // to ensure all characters are unique
-            int length = numberOfCharacters == null || numberOfCharacters > encoding.GetMaximumCharacterLimit() ? encoding.GetMaximumCharacterLimit() : numberOfCharacters.Value;
+            // For the purpose of this example app, ensure numberOfCharacters doesn't exceed GetMaximumCharacterLimit
+            // to ensure all characters are unique (input should be validated instead)
+            int length = numberOfCharacters == null || numberOfCharacters > encoding.GetMaximumCharacterLimit()
+                ? encoding.GetMaximumCharacterLimit()
+                : numberOfCharacters.Value;
+
             var byteArray = new byte[encoding.GetMaximumCharacterLimit()];
 
             for (int i = 0; i < length; i++)
@@ -31,9 +34,9 @@ namespace UniqueChars.Application.Extensions
 
         public static string GetNonUniqueSequence(this ASCIIEncoding encoding, int? numberOfCharacters = null)
         {
-            numberOfCharacters = numberOfCharacters <= 1 ? 2 : numberOfCharacters; // Force non unique sequence for purposes of this example
+            numberOfCharacters = numberOfCharacters <= 1 ? 2 : numberOfCharacters; // Force non unique sequence for purposes of this example (input should be validated instead)
             int length = numberOfCharacters ?? encoding.GetMaximumCharacterLimit();
-            int restart = length == 2 ? 0 : length / 2;
+            int restart = length == 2 ? 0 : length / 2; // Ensures at least half the characters are the same
             int restartCount = 0;
             var byteArray = new byte[length];
 
