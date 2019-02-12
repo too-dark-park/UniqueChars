@@ -1,0 +1,13 @@
+C:\Users\Lenovo\Source\Repos\UniqueChars\UniqueChars\bin\Debug\netcoreapp2.1\UniqueChars.deps.json
+C:\Users\Lenovo\Source\Repos\UniqueChars\UniqueChars\bin\Debug\netcoreapp2.1\UniqueChars.runtimeconfig.json
+C:\Users\Lenovo\Source\Repos\UniqueChars\UniqueChars\bin\Debug\netcoreapp2.1\UniqueChars.runtimeconfig.dev.json
+C:\Users\Lenovo\Source\Repos\UniqueChars\UniqueChars\bin\Debug\netcoreapp2.1\UniqueChars.dll
+C:\Users\Lenovo\Source\Repos\UniqueChars\UniqueChars\bin\Debug\netcoreapp2.1\UniqueChars.pdb
+C:\Users\Lenovo\Source\Repos\UniqueChars\UniqueChars\bin\Debug\netcoreapp2.1\UniqueChars.Application.dll
+C:\Users\Lenovo\Source\Repos\UniqueChars\UniqueChars\bin\Debug\netcoreapp2.1\UniqueChars.Application.pdb
+C:\Users\Lenovo\Source\Repos\UniqueChars\UniqueChars\obj\Debug\netcoreapp2.1\UniqueChars.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Source\Repos\UniqueChars\UniqueChars\obj\Debug\netcoreapp2.1\UniqueChars.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Source\Repos\UniqueChars\UniqueChars\obj\Debug\netcoreapp2.1\UniqueChars.AssemblyInfo.cs
+C:\Users\Lenovo\Source\Repos\UniqueChars\UniqueChars\obj\Debug\netcoreapp2.1\UniqueChars.csproj.CopyComplete
+C:\Users\Lenovo\Source\Repos\UniqueChars\UniqueChars\obj\Debug\netcoreapp2.1\UniqueChars.dll
+C:\Users\Lenovo\Source\Repos\UniqueChars\UniqueChars\obj\Debug\netcoreapp2.1\UniqueChars.pdb

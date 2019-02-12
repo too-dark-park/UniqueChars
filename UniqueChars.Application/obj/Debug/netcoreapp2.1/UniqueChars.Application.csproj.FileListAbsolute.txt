@@ -1,0 +1,8 @@
+C:\Users\Lenovo\Source\Repos\UniqueChars\UniqueChars.Application\bin\Debug\netcoreapp2.1\UniqueChars.Application.deps.json
+C:\Users\Lenovo\Source\Repos\UniqueChars\UniqueChars.Application\bin\Debug\netcoreapp2.1\UniqueChars.Application.dll
+C:\Users\Lenovo\Source\Repos\UniqueChars\UniqueChars.Application\bin\Debug\netcoreapp2.1\UniqueChars.Application.pdb
+C:\Users\Lenovo\Source\Repos\UniqueChars\UniqueChars.Application\obj\Debug\netcoreapp2.1\UniqueChars.Application.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Source\Repos\UniqueChars\UniqueChars.Application\obj\Debug\netcoreapp2.1\UniqueChars.Application.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Source\Repos\UniqueChars\UniqueChars.Application\obj\Debug\netcoreapp2.1\UniqueChars.Application.AssemblyInfo.cs
+C:\Users\Lenovo\Source\Repos\UniqueChars\UniqueChars.Application\obj\Debug\netcoreapp2.1\UniqueChars.Application.dll
+C:\Users\Lenovo\Source\Repos\UniqueChars\UniqueChars.Application\obj\Debug\netcoreapp2.1\UniqueChars.Application.pdb
