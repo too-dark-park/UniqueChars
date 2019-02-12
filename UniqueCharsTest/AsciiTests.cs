@@ -1,5 +1,3 @@
-using System;
-using System.Diagnostics;
 using System.Text;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using UniqueChars.Application.Validation;
