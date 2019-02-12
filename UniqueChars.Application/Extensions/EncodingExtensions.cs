@@ -9,7 +9,7 @@ namespace UniqueChars.Application.Extensions
     {
         #region ASCII
 
-        public static int GetMaximumCharacterCount(this ASCIIEncoding encoding)
+        public static int GetMaximumCharacterLimit(this ASCIIEncoding encoding)
         {
             return (int)Math.Pow(2, 7); // 128, 7-bit character code
         }
@@ -18,8 +18,8 @@ namespace UniqueChars.Application.Extensions
         {
             // For the purpose of this example app, ensure numberOfCharacters doesn't exceed GetMaximumCharacterCount
             // to ensure all characters are unique
-            int length = numberOfCharacters == null || numberOfCharacters > encoding.GetMaximumCharacterCount() ? encoding.GetMaximumCharacterCount() : numberOfCharacters.Value;
-            var byteArray = new byte[encoding.GetMaximumCharacterCount()];
+            int length = numberOfCharacters == null || numberOfCharacters > encoding.GetMaximumCharacterLimit() ? encoding.GetMaximumCharacterLimit() : numberOfCharacters.Value;
+            var byteArray = new byte[encoding.GetMaximumCharacterLimit()];
 
             for (int i = 0; i < length; i++)
             {
@@ -32,7 +32,7 @@ namespace UniqueChars.Application.Extensions
         public static string GetNonUniqueSequence(this ASCIIEncoding encoding, int? numberOfCharacters = null)
         {
             numberOfCharacters = numberOfCharacters <= 1 ? 2 : numberOfCharacters; // Force non unique sequence for purposes of this example
-            int length = numberOfCharacters ?? encoding.GetMaximumCharacterCount();
+            int length = numberOfCharacters ?? encoding.GetMaximumCharacterLimit();
             int restart = length == 2 ? 0 : length / 2;
             int restartCount = 0;
             var byteArray = new byte[length];
@@ -58,7 +58,7 @@ namespace UniqueChars.Application.Extensions
 
         public static bool IsExceedingCharacterLimit(this ASCIIEncoding encoding, string sequence)
         {
-            return sequence.Length > GetMaximumCharacterCount(encoding);
+            return sequence.Length > GetMaximumCharacterLimit(encoding);
         }
 
         #endregion
