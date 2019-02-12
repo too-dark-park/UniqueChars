@@ -51,12 +51,20 @@ namespace UniqueChars.Application.Extensions
 
         public static bool IsUnique_UsingHash(this ASCIIEncoding encoding, string sequence)
         {
-            return SequenceChecker.IsUnique_UsingHash(sequence);
+            byte[] sequenceArray = encoding.GetBytes(sequence);
+            return SequenceChecker.IsUnique_UsingHash(sequenceArray);
         }
 
         public static bool IsUnique_UsingDistinct(this ASCIIEncoding encoding, string sequence)
         {
-            return SequenceChecker.IsUnique_UsingDistinct(sequence);
+            byte[] sequenceArray = encoding.GetBytes(sequence);
+            return SequenceChecker.IsUnique_UsingDistinct(sequenceArray);
+        }
+
+        public static bool IsUnique_UsingCollection(this ASCIIEncoding encoding, string sequence)
+        {
+            byte[] sequenceArray = encoding.GetBytes(sequence);
+            return SequenceChecker.IsUnique_UsingCollection(sequenceArray);
         }
 
         public static bool IsExceedingCharacterLimit(this ASCIIEncoding encoding, string sequence)
@@ -94,6 +102,12 @@ namespace UniqueChars.Application.Extensions
         public static bool IsExceedingCharacterLimit(this UTF8Encoding encoding, string sequence)
         {
             return sequence.Length > GetMaximumCharacterCount(encoding);
+        }
+
+        public static bool IsUnique_UsingCollection(this UTF8Encoding encoding, string sequence)
+        {
+            byte[] sequenceArray = encoding.GetBytes(sequence);
+            return SequenceChecker.IsUnique_UsingCollection(sequenceArray);
         }
 
         #endregion

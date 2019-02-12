@@ -6,12 +6,11 @@ namespace UniqueChars.Application.Validation
 {
     public static class SequenceChecker
     {
-        public static bool IsUnique_UsingCollection(string sequence)
+        public static bool IsUnique_UsingCollection(byte[] sequence)
         {
-            var charArray = sequence.ToCharArray();
             var characters = new Collection<char>();
 
-            foreach (char character in charArray)
+            foreach (char character in sequence)
             {
                 if (characters.Contains(character))
                     return false;
@@ -22,12 +21,10 @@ namespace UniqueChars.Application.Validation
             return true;
         }
 
-        public static bool IsUnique_UsingHash(string sequence)
+        public static bool IsUnique_UsingHash(byte[] sequence)
         {
-            var charArray = sequence.ToCharArray();
-
             var hashSet = new HashSet<char>();
-            foreach (char b in charArray)
+            foreach (char b in sequence)
             {
                 if (!hashSet.Add(b))
                     return false;
@@ -36,11 +33,10 @@ namespace UniqueChars.Application.Validation
             return true;
         }
 
-        public static bool IsUnique_UsingDistinct(string sequence)
+        public static bool IsUnique_UsingDistinct(byte[] sequence)
         {
-            var charArray = sequence.ToCharArray();
-            var distinctArray = charArray.Distinct().ToArray();
-            if (distinctArray.Length != charArray.Length)
+            var distinctArray = sequence.Distinct().ToArray();
+            if (distinctArray.Length != sequence.Length)
                 return false;
 
             return true;
